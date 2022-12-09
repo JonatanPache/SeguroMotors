@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-            $table->id();
+            $table->string('id_user')->constrained()->cascadeOnDelete();
+            $table->string('ci');
             $table->string('nombre');
             $table->string('apellido_pa');
             $table->string('apellido_ma');

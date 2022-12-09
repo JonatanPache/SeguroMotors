@@ -14,9 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('planes', function (Blueprint $table) {
-            $table->id('id_plan');
+            $table->bigIncrements('id');
+            $table->string('name');
             $table->string('descripcion');
             $table->string('costo');
+            $table->string('idPago')->contrained()->cascadeOnDelete();
             $table->timestamps();
         });
     }

@@ -24,7 +24,8 @@ class User extends Authenticatable
         'email',
         'password',
         'remember_token',
-        'notifications_token'
+        'notifications_token',
+        'id_tipo_user'
     ];
 
     /**

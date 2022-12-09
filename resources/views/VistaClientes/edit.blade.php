@@ -1,11 +1,16 @@
-@extends('dashboard')
+@extends('adminlte::page')
+@section('title', 'Dashboard')
 
-@section('contenido')
-<form action="{{route('cliente.update', $cliente->id)}}" method="POST" >
+@section('content_header')
+    <h1>Editar Cliente</h1>
+@stop
+
+@section('content')
+<form action="{{route('cliente.update', $cliente->id_user)}}" method="POST" >
     @csrf
 
     @method('PUT')
-    <input type="text" name="id" value="{{$cliente->id}}" class="hidden">
+    <input type="text" name="id_user" value="{{$cliente->id_user}}" class="hidden">
 
     <div class="flex flex-col mt-2">
         <label for="nombre" class="hidden">Nombre</label>

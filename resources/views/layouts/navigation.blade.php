@@ -6,7 +6,7 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        Seguros Automovilisticos
+                        SegurosMotors
                         {{-- <x-application-logo class="block h-10 w-auto fill-current text-gray-600" /> --}}
                     </a>
                 </div>
@@ -19,9 +19,16 @@
                     <x-nav-link :href="route('empleado.index')" :active="request()->routeIs('empleado.index')">
                         {{ __('Empleado') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('plan.index')" :active="request()->routeIs('plan.index')">
+                    <x-nav-link :href="route('planes.index')" :active="request()->routeIs('planes.index')">
+                        {{ __('Contratos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('planes.index')" :active="request()->routeIs('planes.index')">
                         {{ __('Planes') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('seguros.index')" :active="request()->routeIs('seguros.index')">
+                        {{ __('Seguros') }}
+                    </x-nav-link>
+
                     <x-nav-link :href="route('rol.index')" :active="request()->routeIs('rol.index')">
                         {{ __('Roles') }}
                     </x-nav-link>
